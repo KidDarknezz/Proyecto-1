@@ -1,25 +1,30 @@
-name: Release
+name: Development workflow
 
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
-  u-project-1:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout code
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: 12.x
       - run: npm install
-      - run: npm run test:unit
-      - name: Publish
+      - run: npm run build --if-present
+
+      - name: Deploy to netlify
         uses: netlify/actions/cli@master
-        with:
-          args: deploy --dir=site --functions=functions
         env:
-          NETLIFY_SITE_ID: "d8f70e4f-a682-4592-91b2-def68f24bf52"
-          NETLIFY_AUTH_TOKEN: "c2db1f663abfb4afb770a26366ce1893ce2724571101932e72cbdcbb8995bc1c"
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
