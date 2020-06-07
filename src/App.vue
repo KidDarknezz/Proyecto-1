@@ -2,7 +2,7 @@
   <div id="app">
     <h3>Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual</h3>
     <p>Contador: {{ counter }}</p>
-    <button @click="counter++">Incrementar</button>
+    <button @click="counter++">Incrementar + 1</button>
   </div>
 </template>
 
