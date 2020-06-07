@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual laala</h3>
+    <h3>Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual holis</h3>
     <p>Contador: {{ counter }}</p>
     <button @click="counter++">Incrementar</button>
   </div>
