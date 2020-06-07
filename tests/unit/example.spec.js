@@ -9,5 +9,6 @@ describe("HelloWorld.vue", () => {
       propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
+    expect(2).to.eq(2);
   });
 });
