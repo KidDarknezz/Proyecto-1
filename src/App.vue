@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h3>Projecto 1 - Produccion de Software y normativas de propiedad intelecual</h3>
+    <p>Contador: {{ counter }}</p>
+    <button @click="counter++">Incrementar</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      counter: 0
+    };
   }
-}
+};
 </script>
 
 <style>
