@@ -21,5 +21,5 @@ jobs:
             with:
               args: deploy --dir=site --functions=functions
             env:
-              NETLIFY_SITE_ID: 579b264c-d71b-4329-91d4-ef2060b90cdd
-              NETLIFY_AUTH_TOKEN: c2db1f663abfb4afb770a26366ce1893ce2724571101932e72cbdcbb8995bc1c
+              NETLIFY_SITE_ID: "579b264c-d71b-4329-91d4-ef2060b90cdd"
+              NETLIFY_AUTH_TOKEN: "c2db1f663abfb4afb770a26366ce1893ce2724571101932e72cbdcbb8995bc1c"
