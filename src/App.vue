@@ -3,7 +3,7 @@
     <h3>Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual</h3>
     <!-- <p>Presentacion</p> -->
     <p>Contador: {{ counter }}</p>
-    <button @click="counter++">Incrementar + 1</button>
+    <button @click="counter++">Incrementar</button>
   </div>
 </template>
 
