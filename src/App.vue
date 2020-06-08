@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <h3>
-      Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual
-    </h3>
-    <!-- <p>Presentacion</p> -->
+    <h3>Projecto 1 - Produccion de Software y Normativas de Propiedad Intelectual</h3>
+    <p>Presentacion</p>
     <p>Contador: {{ counter }}</p>
     <button @click="counter++">Incrementar</button>
   </div>
@@ -13,9 +11,9 @@
 export default {
   data() {
     return {
-      counter: 0,
+      counter: 0
     };
-  },
+  }
 };
 </script>
 
